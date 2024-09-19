@@ -50,10 +50,6 @@ namespace Kartverket.Controllers
             return View(faultReports);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> FaultReportEdit()
-           {
-
-        }
+        
     }
 }
