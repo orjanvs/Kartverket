@@ -1,0 +1,33 @@
+﻿@model Kartverket.Models.FaultReportModel 
+
+@{
+}
+
+
+
+<div class="container py-5">
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Latitude</label>
+            <input type="text" class="form-control" id="latitude" asp-for="Latitude" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Longitude</label>
+            <input type="text" class="form-control" id="longitude" asp-for="Longitude" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" asp-for="Description" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+
+    </form>
+
+</div>
+
+

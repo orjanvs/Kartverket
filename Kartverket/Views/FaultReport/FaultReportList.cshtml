@@ -1,0 +1,43 @@
+﻿@model List<Kartverket.Models.FaultReportModel>
+
+@{
+}
+
+
+<div>
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var faultReport in Model)
+            {
+                <tr>
+                    <td>@faultReport.ReportId</td>
+                    <td>@faultReport.Longitude</td>
+                    <td>@faultReport.Latitude</td>
+                    <td>@faultReport.Description</td>
+                    <td>
+                        <a asp-area=""
+                           asp-controller="AdminTags"
+                           asp-action="Edit"
+                           asp-route-id="@faultReport.ReportId">Edit</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No tags found!</p>
+}
+</div>
